@@ -1,5 +1,5 @@
 # Data pipeline
-Bài tập thực hành về ETL VÀ ELT data
+<h1 align="center">Bài tập thực hành về ETL VÀ ELT data</h1>
 <img align="left" width="400" src="https://github.githubassets.com/images/modules/profile/profile-first-repo.svg">
 <h1 align="center">Hi 👋, I'm Vo Nguyen Thanh Tu</h1>
 
@@ -45,8 +45,12 @@ Bài tập thực hành về ETL VÀ ELT data
 <p>
   Sơ đồ mô phỏng về quá trình ETL và ELT data
 </p>
- <img src="image/ETL_FLOW.jpg" width = 100%/>
+
 # 🧑‍💻ETL data:
+<p>
+  - Flow thực hiện quá trình ETL
+</p>
+<img src="image/ETL_FLOW.jpg" width = 100%/>
 <p>
   - Thực hiện đọc data file .csv của 30 ngày
 </p>
@@ -57,7 +61,13 @@ Bài tập thực hành về ETL VÀ ELT data
   - Xuất ra 1 file excel đã xử lý và lưu trữ nó vào 1 databases nào đó.
 </p>
 <img src="image/du_lieu_xuat_csv.jpg" width = 100%/>
+
 # 🧑‍💻ELT data:
+<p>
+  - Flow ELT và điểm khác nhau giữa 2 cái.
+</p>
+<img src="image/ETL VS ELT.jpg" width = 100%/>
+
 <p>
   - Thực hiện import data từ file .csv đã được ETL ở trên vào data warehouse.
 </p>
