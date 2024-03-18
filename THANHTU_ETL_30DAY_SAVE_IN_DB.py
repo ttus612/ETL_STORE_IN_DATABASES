@@ -194,7 +194,7 @@ if __name__ == "__main__":
 
     # Chọn ngày mình muốn xử lý
     start_date = '20220401'
-    end_date = '20220401'
+    end_date = '20220430'
     list_files = genarate_date_range(start_date, end_date)
     
     sum_date = sum_date(start_date, end_date)
@@ -279,10 +279,10 @@ if __name__ == "__main__":
     print("-----------------------------------")
     print("Save data to database")
     print("-----------------------------------")
-    url = 'jdbc:mysql://' + 'localhost' + ':' + '3306' + '/' + '...'
+    url = 'jdbc:mysql://' + 'localhost' + ':' + '3306' + '/' + 'etl_db'
     driver = "com.mysql.cj.jdbc.Driver"
-    user = '...'
-    password = '...'
+    user = 'root'
+    password = 'sapassword'
     ds_final.write.format('jdbc').option('url',url).option('driver',driver).option('dbtable','CONTRACTS').option('user',user).option('password',password).mode('append').save()
    
     print("-----------------------------------")
@@ -291,9 +291,9 @@ if __name__ == "__main__":
     sql = '(select * from contracts) A'
     df = spark.read.format('jdbc').options(url = url , driver = driver , dbtable = sql , user=user , password = password).load()
     df.show()
-    # save_path = "D:\\WORKSPACE\\DE\\study_de\\Practice\\Class5\\Storage\\Methoad2"
-    # ds.repartition(1).write.csv(save_path, header=True)
-    # pivot_data.coalesce(1).write.option("header","true").format("csv").save(save_path)
+    save_path = "D:\\WORKSPACE\\DE\\study_de\\Practice\\Class5\\Storage\\Methoad2"
+    ds.repartition(1).write.csv(save_path, header=True)
+    pivot_data.coalesce(1).write.option("header","true").format("csv").save(save_path)
 
     print("-----------------------------------")
     print("End processing data")
