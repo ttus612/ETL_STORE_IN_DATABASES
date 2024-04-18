@@ -194,7 +194,7 @@ if __name__ == "__main__":
 
     # Chọn ngày mình muốn xử lý
     start_date = '20220401'
-    end_date = '20220430'
+    end_date = '20220401'
     list_files = genarate_date_range(start_date, end_date)
     
     sum_date = sum_date(start_date, end_date)
